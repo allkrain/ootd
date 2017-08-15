@@ -1,0 +1,85 @@
+body {
+  font: $font;
+  color: #fff;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.black-radial-gradient {
+  position: relative;
+  z-index: 1;
+  .clock {
+    background: url('../../assets/img/clock.png') center no-repeat;
+    background-size: 35%;
+    background-position-x: 55%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.center-block {
+  text-align: center;
+  margin: 0 auto;
+  &.social {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3%;
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.center-text-double {
+  .left-side {
+    width: 50%;
+    float: left;
+    > span {
+      margin-right: 60px;
+    }
+  }
+  .right-side {
+    width: 50%;
+    float: right;
+  }
+}
+
+.absolute-horizontal-center {
+  left: 0;
+  right: 0;
+}
+
+.absolute-vertical-center {
+  top: 0;
+  bottom: 0;
+}
+
+.mt-45 {
+  margin-top: 45px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}

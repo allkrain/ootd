@@ -1,0 +1,22 @@
+@media screen and (max-height: 700px) {
+  body {
+    font-size: 4vmin;
+  }
+  .show-btn {
+    padding: 14px 80px 14px 20px;
+    font-size: 3.5vmin;
+    &.btn-send:after {
+      transform: scale(.6);
+      top: 0;
+      right: 10px;
+    }
+    &.btn-link:after {
+      transform: scale(.6);
+      top: 0;
+      right: 10px;
+    }
+  }
+  .gradient-container .container-text p {
+    width: 75%;
+  }
+}

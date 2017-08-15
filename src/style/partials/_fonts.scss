@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'GothamProLight';
+  src: url($fonts-path + 'GothamProLight.eot'); /* IE9 Compat Modes */
+  src: url($fonts-path + 'GothamProLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url($fonts-path + 'GothamProLight.woff2') format('woff2'), /* Super Modern Browsers */
+  url($fonts-path + 'GothamProLight.woff') format('woff'), /* Pretty Modern Browsers */
+  url($fonts-path + 'GothamProLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url($fonts-path + 'GothamProLight.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'GothamProBold';
+  src: url($fonts-path + 'GothamProBold.eot'); /* IE9 Compat Modes */
+  src: url($fonts-path + 'GothamProBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url($fonts-path + 'GothamProBold.woff2') format('woff2'), /* Super Modern Browsers */
+  url($fonts-path + 'GothamProBold.woff') format('woff'), /* Pretty Modern Browsers */
+  url($fonts-path + 'GothamProBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url($fonts-path + 'GothamProBold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+.font-light {
+  font-family: $font-light;
+}
+.font-bold {
+  font-family: $font-bold;
+}

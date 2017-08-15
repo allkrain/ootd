@@ -1,0 +1,69 @@
+// Vars
+
+$cubeSize: 45vmin;
+$delay: .5s;
+
+// Page
+
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: $cubeSize*2;
+  width: $cubeSize*2;
+  transform: translateY(-50%) translateX(-50%) translateZ(0);
+  perspective: $cubeSize*4;
+}
+
+.cube {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: $cubeSize;
+  width: $cubeSize;
+  margin-left: ($cubeSize/2)*-1;
+  margin-top: ($cubeSize/2)*-1;
+  transform-origin: 50% 50% ($cubeSize/2);
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+  transition: all .3s ease-out;
+  .face {
+    background: linear-gradient(rgb(210, 164, 154), rgb(159, 115, 134));
+    color: transparent;
+    font-size: $cubeSize;
+    text-align: center;
+    line-height: $cubeSize;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-box-shadow: 0 0 1px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 1px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .1);
+    //backface-visibility: hidden;
+    &:nth-child(1) {
+      transform-origin: center center;
+      transform: rotateY(180deg);
+    }
+    &:nth-child(2) {
+      transform-origin: center left;
+      transform: rotateY(-90deg);
+    }
+    &:nth-child(3) {
+      transform: translateZ($cubeSize);
+    }
+    &:nth-child(4) {
+      transform-origin: center right;
+      transform: rotateY(90deg);
+    }
+    &:nth-child(5) {
+      transform-origin: top center;
+      transform: rotateX(90deg);
+    }
+    &:nth-child(6) {
+      transform-origin: bottom center;
+      transform: rotateX(-90deg);
+    }
+  }
+}

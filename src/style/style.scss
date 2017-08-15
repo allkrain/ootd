@@ -1,0 +1,21 @@
+@import "reset";
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@import "partials/variables";
+@import "partials/fonts";
+@import "partials/icons";
+@import "partials/main";
+@import "partials/cube";
+@import "partials/text";
+@import "partials/gradient";
+@import "partials/bnts";
+@import "partials/containers";
+@import "partials/popup";
+@import "partials/media";
