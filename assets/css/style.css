@@ -165,7 +165,7 @@ body {
           transform-style: preserve-3d;
   transition: all .3s ease-out; }
   .cube .face {
-    background: linear-gradient(#d2a49a, #9f7386);
+    background: linear-gradient(#b70445, #5d07eb);
     color: transparent;
     font-size: 45vmin;
     text-align: center;
