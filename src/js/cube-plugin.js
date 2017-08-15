@@ -1,7 +1,7 @@
 $(function () {
     "use strict";
 
-    var cube = document.getElementsByClassName("cube"),
+    var cube = $(".cube"),
         q = 0.2;
 
     function handleMouse(e) {
@@ -12,29 +12,22 @@ $(function () {
         x = x * q * 1.5;
         y = -y * q;
 
-        for (i = 0; i < cube.length; i++) {
-            cube[i].style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
-        }
+        $(cube).attr("style", "transform: rotate3d(0, 1, 0, " + x + "deg) rotate3d(1, 0, 0, " + y + "deg)");
     }
 
     function handleStart() {
         var x = -100,
             y = 200,
-            cube = document.getElementsByClassName("cube"),
+            cube = $(".cube"),
             i;
 
         x = x * q * 1.5;
         y = -y * q;
 
-        for (i = 0; i < cube.length; i++) {
-            cube[i].style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
-        }
+        $(cube).attr("style", "transform: rotate3d(0, 1, 0, " + x + "deg) rotate3d(1, 0, 0, " + y + "deg)");
     }
 
     handleStart();
 
-    document.addEventListener("mousemove", function(e) {
-      var selfTarget = e;
-      setTimeout(handleMouse(selfTarget), 200);
-    });
+    document.addEventListener("mousemove", handleMouse);
 });
