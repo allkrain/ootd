@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     sourcemaps = require('gulp-sourcemaps'),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    ghpages = require('gulp-gh-pages');
 
 var path = {
     build: {
