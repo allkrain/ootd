@@ -11,7 +11,7 @@ $delay: .5s;
   left: 50%;
   height: $cubeSize*2;
   width: $cubeSize*2;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translateY(-50%) translateX(-50%) translateZ(0);
   perspective: $cubeSize*4;
 }
 
@@ -24,11 +24,11 @@ $delay: .5s;
   margin-left: ($cubeSize/2)*-1;
   margin-top: ($cubeSize/2)*-1;
   transform-origin: 50% 50% ($cubeSize/2);
-  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
   transform-style: preserve-3d;
   transition: all .3s ease-out;
   .face {
-    background: linear-gradient(rgb(210, 164, 154), rgb(159, 115, 134));
+    background: linear-gradient(#b70445, #5d07eb);
     color: transparent;
     font-size: $cubeSize;
     text-align: center;
@@ -44,26 +44,26 @@ $delay: .5s;
     //backface-visibility: hidden;
     &:nth-child(1) {
       transform-origin: center center;
-      transform: rotate3d(0, 1, 0, 180deg);
+      transform: rotateY(180deg);
     }
     &:nth-child(2) {
       transform-origin: center left;
-      transform: rotate3d(0, 1, 0, -90deg);
+      transform: rotateY(-90deg);
     }
     &:nth-child(3) {
-      transform: translate3d(0, 0, $cubeSize);
+      transform: translateZ($cubeSize);
     }
     &:nth-child(4) {
       transform-origin: center right;
-      transform: rotate3d(0, 1, 0, 90deg);
+      transform: rotateY(90deg);
     }
     &:nth-child(5) {
       transform-origin: top center;
-      transform: rotate3d(1, 0, 0, 90deg);
+      transform: rotateX(90deg);
     }
     &:nth-child(6) {
       transform-origin: bottom center;
-      transform: rotate3d(1, 0, 0, -90deg);
+      transform: rotateX(-90deg);
     }
   }
 }
